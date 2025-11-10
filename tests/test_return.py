@@ -1,9 +1,4 @@
-from getpass import fallback_getpass
-
-import pytest
-
-import services.library_service
-from services.library_service import return_book_by_patron, borrow_book_by_patron
+from services.library_service import return_book_by_patron
 
 def test_return_valid_input(mocker):
     test_book = {'title' : "Test Book", 'book_id' : 5, 'available_copies' : 5, 'record_id' : 4, 'is_overdue' : False}
