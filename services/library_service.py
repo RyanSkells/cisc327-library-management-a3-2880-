@@ -230,7 +230,6 @@ def get_patron_status_report(patron_id: str) -> (List[Dict], float, int, List[Di
         total_fee = total_fee + calculate_late_fee_for_book(patron_id, book['book_id'])['fee_amount']
     return borrowed_books, total_fee, borrowed_count, records
 
-
 def pay_late_fees(patron_id: str, book_id: int, payment_gateway: PaymentGateway = None) -> Tuple[
     bool, str, Optional[str]]:
     """
